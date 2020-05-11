@@ -1,0 +1,1213 @@
+<html>
+
+<head>
+    <title>
+        Chess
+    </title>
+
+    <style>
+        
+        td{
+            border: 2px solid black;
+            height: 70px;
+            width: 60px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td id="11" data-value="1r" onclick="showMoves(11, '1r', 1)"><img src="ChessPieces/Chess_rlt60.png"></td>
+            <td id="12" data-value="1n" onclick="showMoves(12, '1n', 1)"><img src="ChessPieces/Chess_nlt60.png"></td>
+            <td id="13" data-value="1b" onclick="showMoves(13, '1b', 1)"><img src="ChessPieces/Chess_blt60.png"></td>
+            <td id="14" data-value="1q" onclick="showMoves(14, '1q', 1)"><img src="ChessPieces/Chess_qlt60.png"></td>
+            <td id="15" data-value="1k" onclick="showMoves(15, '1k', 1)"><img src="ChessPieces/Chess_klt60.png"></td>
+            <td id="16" data-value="1b" onclick="showMoves(16, '1b', 1)"><img src="ChessPieces/Chess_blt60.png"></td>
+            <td id="17" data-value="1n" onclick="showMoves(17, '1n', 1)"><img src="ChessPieces/Chess_nlt60.png"></td>
+            <td id="18" data-value="1r" onclick="showMoves(18, '1r', 1)"><img src="ChessPieces/Chess_rlt60.png"></td>
+        </tr>
+
+        <tr>
+            <td id="21" data-value="1p" onclick="showMoves(21, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="22" data-value="1p" onclick="showMoves(22, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="23" data-value="1p" onclick="showMoves(23, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="24" data-value="1p" onclick="showMoves(24, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="25" data-value="1p" onclick="showMoves(25, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="26" data-value="1p" onclick="showMoves(26, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="27" data-value="1p" onclick="showMoves(27, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+            <td id="28" data-value="1p" onclick="showMoves(28, '1p', 1)"><img src="ChessPieces/Chess_plt60.png"></td>
+        </tr>
+
+        <tr>
+            <td id="31" data-value="e" onclick="showMoves(31, 'e', 0)"></td>
+            <td id="32" data-value="e" onclick="showMoves(32, 'e', 0)"></td>
+            <td id="33" data-value="e" onclick="showMoves(33, 'e', 0)"></td>
+            <td id="34" data-value="e" onclick="showMoves(34, 'e', 0)"></td>
+            <td id="35" data-value="e" onclick="showMoves(35, 'e', 0)"></td>
+            <td id="36" data-value="e" onclick="showMoves(36, 'e', 0)"></td>
+            <td id="37" data-value="e" onclick="showMoves(37, 'e', 0)"></td>
+            <td id="38" data-value="e" onclick="showMoves(38, 'e', 0)"></td>
+        </tr>
+
+        <tr>
+            <td id="41" data-value="e" onclick="showMoves(41, 'e', 0)"></td>
+            <td id="42" data-value="e" onclick="showMoves(42, 'e', 0)"></td>
+            <td id="43" data-value="e" onclick="showMoves(43, 'e', 0)"></td>
+            <td id="44" data-value="e" onclick="showMoves(44, 'e', 0)"></td>
+            <td id="45" data-value="e" onclick="showMoves(45, 'e', 0)"></td>
+            <td id="46" data-value="e" onclick="showMoves(46, 'e', 0)"></td>
+            <td id="47" data-value="e" onclick="showMoves(47, 'e', 0)"></td>
+            <td id="48" data-value="e" onclick="showMoves(48, 'e', 0)"></td>
+        </tr>
+
+        <tr>
+            <td id="51" data-value="e" onclick="showMoves(51, 'e', 0)"></td>
+            <td id="52" data-value="e" onclick="showMoves(52, 'e', 0)"></td>
+            <td id="53" data-value="e" onclick="showMoves(53, 'e', 0)"></td>
+            <td id="54" data-value="e" onclick="showMoves(54, 'e', 0)"></td>
+            <td id="55" data-value="e" onclick="showMoves(55, 'e', 0)"></td>
+            <td id="56" data-value="e" onclick="showMoves(56, 'e', 0)"></td>
+            <td id="57" data-value="e" onclick="showMoves(57, 'e', 0)"></td>
+            <td id="58" data-value="e" onclick="showMoves(58, 'e', 0)"></td>
+        </tr>
+
+        <tr>
+            <td id="61" data-value="e" onclick="showMoves(61, 'e', 0)"></td>
+            <td id="62" data-value="e" onclick="showMoves(62, 'e', 0)"></td>
+            <td id="63" data-value="e" onclick="showMoves(63, 'e', 0)"></td>
+            <td id="64" data-value="e" onclick="showMoves(64, 'e', 0)"></td>
+            <td id="65" data-value="e" onclick="showMoves(65, 'e', 0)"></td>
+            <td id="66" data-value="e" onclick="showMoves(66, 'e', 0)"></td>
+            <td id="67" data-value="e" onclick="showMoves(67, 'e', 0)"></td>
+            <td id="68" data-value="e" onclick="showMoves(68, 'e', 0)"></td>
+        </tr>
+
+        <tr>
+            <td id="71" data-value="2p" onclick="showMoves(71, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="72" data-value="2p" onclick="showMoves(72, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="73" data-value="2p" onclick="showMoves(73, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="74" data-value="2p" onclick="showMoves(74, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="75" data-value="2p" onclick="showMoves(75, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="76" data-value="2p" onclick="showMoves(76, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="77" data-value="2p" onclick="showMoves(77, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+            <td id="78" data-value="2p" onclick="showMoves(78, '2p', 2)"><img src="ChessPieces/Chess_pdt60.png"></td>
+        </tr>
+
+        <tr>
+            <td id="81" data-value="2r" onclick="showMoves(81, '2r', 2)"><img src="ChessPieces/Chess_rdt60.png"></td>
+            <td id="82" data-value="2n" onclick="showMoves(82, '2n', 2)"><img src="ChessPieces/Chess_ndt60.png"></td>
+            <td id="83" data-value="2b" onclick="showMoves(83, '2b', 2)"><img src="ChessPieces/Chess_bdt60.png"></td>
+            <td id="84" data-value="2q" onclick="showMoves(84, '2q', 2)"><img src="ChessPieces/Chess_qdt60.png"></td>
+            <td id="85" data-value="2k" onclick="showMoves(85, '2k', 2)"><img src="ChessPieces/Chess_kdt60.png"></td>
+            <td id="86" data-value="2b" onclick="showMoves(86, '2b', 2)"><img src="ChessPieces/Chess_bdt60.png"></td>
+            <td id="87" data-value="2n" onclick="showMoves(87, '2n', 2)"><img src="ChessPieces/Chess_ndt60.png"></td>
+            <td id="88" data-value="2r" onclick="showMoves(88, '2r', 2)"><img src="ChessPieces/Chess_rdt60.png"></td>
+        </tr>
+
+    </table>
+
+    <p id="test">
+
+
+    <script>
+
+        /*Global variable to check if a cell is higlighted*/
+        clicked=false;
+        potential=false;
+
+        //Use a counter to keep hold of what player's move it is
+        counter=2;
+
+        function showMoves(cell, piece, player){
+
+            /*Check if the user has clicked on a potential move*/
+            /*If they have then go to make move*/
+            if (document.getElementById(cell).style.border=="2px solid red" || document.getElementById(cell).style.border=="2px solid yellow"){
+                
+                //Need to pass cell , playerand piece here
+                makeMove(cell, piece, player);
+
+                //Do not continue any further into showMoves function if reached this stage
+                return;
+                
+            }
+
+            /*Find the table cell the user has clicked on*/
+            /*Important points - Can only have once cell clicked*/
+            /*Click on highlighted cell to unclick it*/
+
+            if(clicked==false){
+                document.getElementById(cell).style.border="2px solid lightgreen";
+                clicked=true;
+            }else if (clicked==true){
+
+                /*Unclick a cell*/
+                if(document.getElementById(cell).style.border=="2px solid lightgreen"){
+                    document.getElementById(cell).style.border="2px solid black";
+                    
+                    /*Remove the potential moves also*/
+                    /*Need to change this so that it removes the*/
+                    /*Potential moves for all pieces/ positions*/
+                    
+                    /*Currently for this just replace all borders on board with black*/
+                    for (i=11; i<=88; i++){
+                        try{
+                            document.getElementById(i).style.border="2px solid black";
+                        }catch(e){}
+                    }
+
+                    /*Reset the variables*/
+                    clicked=false;
+                    potential=false;
+                }
+            }
+
+            /*If a cell has been clicked then show the potential moves*/
+            if(clicked==true){
+
+
+
+                
+
+
+                /*If there is no piece (e for empty) then skip*/
+
+                if(potential==false && document.getElementById(cell).dataset.value!='e'){
+
+                    
+
+                    /*To start do positions of pawns*/
+                    /*Don't worry about 2 moves first go yet*/
+                    newplayer=document.getElementById(cell).dataset.value;
+
+                    if(counter%2==0){
+
+                    if(newplayer=="1p" || newplayer=="1n" || newplayer=="1r" || newplayer=="1b" || newplayer=="1q" || newplayer=="1k"){
+
+                        
+                        if(document.getElementById(cell).dataset.value=='1p'){       
+                            /*Player 1 pawns can only move down*/
+
+                            try{
+
+                                if(document.getElementById(cell+10).dataset.value=="e"){;
+                                    document.getElementById(cell+10).style.border="2px solid red";
+                                }//do not need an else here as only one move can be made
+
+                            }catch(e){}
+
+                            try{
+                                //check if the piece is in the start position and if so then can move 2 squares
+                                //for player 1 whites it is on 2nd tier so positions 21 - 28
+                                if((cell>=21) && (cell<=28)){
+                                    if(document.getElementById(cell+20).dataset.value=="e"){
+                                        document.getElementById(cell+20).style.border="2px solid red";
+                                    }
+                                }
+                                
+                            }catch(e){}
+
+                            try{
+
+                                
+                                
+                                //check for diagonal pawn taking opponent moves
+                                if(document.getElementById(cell+11).dataset.value=="2p" || document.getElementById(cell+11).dataset.value=="2r" || document.getElementById(cell+11).dataset.value=="2b" || document.getElementById(cell+11).dataset.value=="2n"|| document.getElementById(cell+11).dataset.value=="2k" || document.getElementById(cell+11).dataset.value=="2q"){
+                                    document.getElementById(cell+11).style.border="2px solid yellow";
+                                }
+
+                            }catch(e){}
+
+                            try{
+
+                                
+                                if(document.getElementById(cell+9).dataset.value=="2p" || document.getElementById(cell+9).dataset.value=="2r" || document.getElementById(cell+9).dataset.value=="2b" || document.getElementById(cell+9).dataset.value=="2n"|| document.getElementById(cell+9).dataset.value=="2k" || document.getElementById(cell+9).dataset.value=="2q"){
+                                    
+
+                                    document.getElementById(cell+9).style.border="2px solid yellow";
+                                }
+
+
+                                
+                            }catch(e){}
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='1r'){
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+
+                                    //need this else to stop further moves when a move is blocked
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='1n'){
+
+                            
+                            
+                            try{
+                                if(document.getElementById(cell-12).dataset.value=="e"){
+                                    document.getElementById(cell-12).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell-12).dataset.value=="2p" || document.getElementById(cell-12).dataset.value=="2b" || document.getElementById(cell-12).dataset.value=="2r" || document.getElementById(cell-12).dataset.value=="2n" || document.getElementById(cell-12).dataset.value=="2q" || document.getElementById(cell-12).dataset.value=="2k"){
+                                    document.getElementById(cell-12).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-8).dataset.value=="e"){
+                                    document.getElementById(cell-8).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell-8).dataset.value=="2p" || document.getElementById(cell-8).dataset.value=="2b" || document.getElementById(cell-8).dataset.value=="2r" || document.getElementById(cell-8).dataset.value=="2n" || document.getElementById(cell-8).dataset.value=="2q" || document.getElementById(cell-8).dataset.value=="2k"){
+                                    document.getElementById(cell-8).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+12).dataset.value=="e"){
+                                    document.getElementById(cell+12).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                
+                                else if(document.getElementById(cell+12).dataset.value=="2p" || document.getElementById(cell+12).dataset.value=="2b" || document.getElementById(cell+12).dataset.value=="2r" || document.getElementById(cell+12).dataset.value=="2n" || document.getElementById(cell+12).dataset.value=="2q" || document.getElementById(cell+12).dataset.value=="2k"){
+                                    document.getElementById(cell+12).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+8).dataset.value=="e"){
+                                    document.getElementById(cell+8).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell+8).dataset.value=="2p" || document.getElementById(cell+8).dataset.value=="2b" || document.getElementById(cell+8).dataset.value=="2r" || document.getElementById(cell+8).dataset.value=="2n" || document.getElementById(cell+8).dataset.value=="2q" || document.getElementById(cell+8).dataset.value=="2k"){
+                                    document.getElementById(cell+8).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-21).dataset.value=="e"){
+                                    document.getElementById(cell-21).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell-21).dataset.value=="2p" || document.getElementById(cell-21).dataset.value=="2b" || document.getElementById(cell-21).dataset.value=="2r" || document.getElementById(cell-21).dataset.value=="2n" || document.getElementById(cell-21).dataset.value=="2q" || document.getElementById(cell-21).dataset.value=="2k"){
+                                    document.getElementById(cell-21).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{ 
+                                if(document.getElementById(cell+21).dataset.value=="e"){
+                                    document.getElementById(cell+21).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell+21).dataset.value=="2p" || document.getElementById(cell+21).dataset.value=="2b" || document.getElementById(cell+21).dataset.value=="2r" || document.getElementById(cell+21).dataset.value=="2n" || document.getElementById(cell+21).dataset.value=="2q" || document.getElementById(cell+21).dataset.value=="2k"){
+                                    document.getElementById(cell+21).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-19).dataset.value=="e"){
+                                    document.getElementById(cell-19).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell-19).dataset.value=="2p" || document.getElementById(cell-19).dataset.value=="2b" || document.getElementById(cell-19).dataset.value=="2r" || document.getElementById(cell-19).dataset.value=="2n" || document.getElementById(cell-19).dataset.value=="2q" || document.getElementById(cell-19).dataset.value=="2k"){
+                                    document.getElementById(cell-19).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+19).dataset.value=="e"){
+                                    document.getElementById(cell+19).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell+19).dataset.value=="2p" || document.getElementById(cell+19).dataset.value=="2b" || document.getElementById(cell+19).dataset.value=="2r" || document.getElementById(cell+19).dataset.value=="2n" || document.getElementById(cell+19).dataset.value=="2q" || document.getElementById(cell+19).dataset.value=="2k"){
+                                    document.getElementById(cell+19).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='1b'){
+                            for(i=11;i<=88;i=i+11){
+                                
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='1q'){
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell+i).dataset.value=="2p" || document.getElementById(cell+i).dataset.value=="2b" || document.getElementById(cell+i).dataset.value=="2r" || document.getElementById(cell+i).dataset.value=="2n" || document.getElementById(cell+i).dataset.value=="2q" || document.getElementById(cell+i).dataset.value=="2k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-i).dataset.value=="2p" || document.getElementById(cell-i).dataset.value=="2b" || document.getElementById(cell-i).dataset.value=="2r" || document.getElementById(cell-i).dataset.value=="2n" || document.getElementById(cell-i).dataset.value=="2q" || document.getElementById(cell-i).dataset.value=="2k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='1k'){
+                            try{
+                                if(document.getElementById(cell+10).dataset.value=="e"){
+                                    document.getElementById(cell+10).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell+10).dataset.value=="2p" || document.getElementById(cell+10).dataset.value=="2b" || document.getElementById(cell+10).dataset.value=="2r" || document.getElementById(cell+10).dataset.value=="2n" || document.getElementById(cell+10).dataset.value=="2q" || document.getElementById(cell+10).dataset.value=="2k"){
+                                    document.getElementById(cell+10).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-10).dataset.value=="e"){
+                                    document.getElementById(cell-10).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell-10).dataset.value=="2p" || document.getElementById(cell-10).dataset.value=="2b" || document.getElementById(cell-10).dataset.value=="2r" || document.getElementById(cell-10).dataset.value=="2n" || document.getElementById(cell-10).dataset.value=="2q" || document.getElementById(cell-10).dataset.value=="2k"){
+                                    document.getElementById(cell-10).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+1).dataset.value=="e"){
+                                    document.getElementById(cell+1).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell+1).dataset.value=="2p" || document.getElementById(cell+1).dataset.value=="2b" || document.getElementById(cell+1).dataset.value=="2r" || document.getElementById(cell+1).dataset.value=="2n" || document.getElementById(cell+1).dataset.value=="2q" || document.getElementById(cell+1).dataset.value=="2k"){
+                                    document.getElementById(cell+1).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-1).dataset.value=="e"){
+                                    document.getElementById(cell-1).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell-1).dataset.value=="2p" || document.getElementById(cell-1).dataset.value=="2b" || document.getElementById(cell-1).dataset.value=="2r" || document.getElementById(cell-1).dataset.value=="2n" || document.getElementById(cell-1).dataset.value=="2q" || document.getElementById(cell-1).dataset.value=="2k"){
+                                    document.getElementById(cell-1).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+11).dataset.value=="e"){
+                                    document.getElementById(cell+11).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                else if(document.getElementById(cell+11).dataset.value=="2p" || document.getElementById(cell+11).dataset.value=="2b" || document.getElementById(cell+11).dataset.value=="2r" || document.getElementById(cell+11).dataset.value=="2n" || document.getElementById(cell+11).dataset.value=="2q" || document.getElementById(cell+11).dataset.value=="2k"){
+                                    document.getElementById(cell+11).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-11).dataset.value=="e"){
+                                    document.getElementById(cell-11).style.border="2px solid red";
+                                }
+                                //If you are able to take an oppoents piece then show it in yellow
+                                    else if(document.getElementById(cell-11).dataset.value=="2p" || document.getElementById(cell-11).dataset.value=="2b" || document.getElementById(cell-11).dataset.value=="2r" || document.getElementById(cell-11).dataset.value=="2n" || document.getElementById(cell-11).dataset.value=="2q" || document.getElementById(cell-11).dataset.value=="2k"){
+                                    document.getElementById(cell-11).style.border="2px solid yellow";
+                                    }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+9).dataset.value=="e"){
+                                    document.getElementById(cell+9).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+9).dataset.value=="2p" || document.getElementById(cell+9).dataset.value=="2b" || document.getElementById(cell+9).dataset.value=="2r" || document.getElementById(cell+9).dataset.value=="2n" || document.getElementById(cell+9).dataset.value=="2q" || document.getElementById(cell+9).dataset.value=="2k"){
+                                    document.getElementById(cell+9).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-9).dataset.value=="e"){
+                                    document.getElementById(cell-9).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-9).dataset.value=="2p" || document.getElementById(cell-9).dataset.value=="2b" || document.getElementById(cell-9).dataset.value=="2r" || document.getElementById(cell-9).dataset.value=="2n" || document.getElementById(cell-9).dataset.value=="2q" || document.getElementById(cell-9).dataset.value=="2k"){
+                                    document.getElementById(cell-9).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            potential=true;
+                        }
+                    }
+                    }
+
+                    if(counter%2!=0){
+                    if(newplayer=="2p" || newplayer=="2n" || newplayer=="2r" || newplayer=="2b" || newplayer=="2q" || newplayer=="2k"){
+                        if(document.getElementById(cell).dataset.value=='2p'){
+                            /*Player 2 pawns can only move up*/
+                            /*Check move down is available*/
+                            try{
+
+                                if(document.getElementById(cell-10).dataset.value=="e"){
+                                    document.getElementById(cell-10).style.border="2px solid red";
+                                }
+
+                            }catch(e){}
+
+                            try{
+                                //check if the piece is in the start position and if so then can move 2 squares
+                                //for player 1 whites it is on 2nd tier so positions 21 - 28
+                                if((cell>=71) && (cell<=78)){
+                                    if(document.getElementById(cell-20).dataset.value=="e"){
+                                        document.getElementById(cell-20).style.border="2px solid red";
+                                    }
+                                }
+                                
+                            }catch(e){}
+
+                            try{
+
+                                if(document.getElementById(cell-11).dataset.value=="1p" || document.getElementById(cell-11).dataset.value=="1r" || document.getElementById(cell-11).dataset.value=="1b" || document.getElementById(cell-11).dataset.value=="1n"|| document.getElementById(cell-11).dataset.value=="1k" || document.getElementById(cell-11).dataset.value=="1q"){;
+                                    
+                                    document.getElementById(cell-11).style.border="2px solid yellow";
+                                }
+
+                            }catch(e){}
+
+                            try{
+
+                                if(document.getElementById(cell-9).dataset.value=="1p" || document.getElementById(cell-9).dataset.value=="1r" || document.getElementById(cell-9).dataset.value=="1b" || document.getElementById(cell-9).dataset.value=="1n"|| document.getElementById(cell-9).dataset.value=="1k" || document.getElementById(cell-9).dataset.value=="1q"){;
+                                    document.getElementById(cell-9).style.border="2px solid yellow";
+                                }
+
+                                
+                            }catch(e){}
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='2r'){
+
+                            //ERROR HERE AS BLACK PIECES NOT PICKING UP TAKING OPPONENT MOVES PROPERLY
+
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='2n'){
+                            
+                            try{
+                                if(document.getElementById(cell-12).dataset.value=="e"){
+                                    document.getElementById(cell-12).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-12).dataset.value=="1p" || document.getElementById(cell-12).dataset.value=="1b" || document.getElementById(cell-12).dataset.value=="1r" || document.getElementById(cell-12).dataset.value=="1n" || document.getElementById(cell-12).dataset.value=="1q" || document.getElementById(cell-12).dataset.value=="1k"){
+                                        document.getElementById(cell-12).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-8).dataset.value=="e"){
+                                    document.getElementById(cell-8).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-8).dataset.value=="1p" || document.getElementById(cell-8).dataset.value=="1b" || document.getElementById(cell-8).dataset.value=="1r" || document.getElementById(cell-8).dataset.value=="1n" || document.getElementById(cell-8).dataset.value=="1q" || document.getElementById(cell-8).dataset.value=="1k"){
+                                        document.getElementById(cell-8).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+12).dataset.value=="e"){
+                                    document.getElementById(cell+12).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+12).dataset.value=="1p" || document.getElementById(cell+12).dataset.value=="1b" || document.getElementById(cell+12).dataset.value=="1r" || document.getElementById(cell+12).dataset.value=="1n" || document.getElementById(cell+12).dataset.value=="1q" || document.getElementById(cell+12).dataset.value=="1k"){
+                                        document.getElementById(cell+12).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+8).dataset.value=="e"){
+                                    document.getElementById(cell+8).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+8).dataset.value=="1p" || document.getElementById(cell+8).dataset.value=="1b" || document.getElementById(cell+8).dataset.value=="1r" || document.getElementById(cell+8).dataset.value=="1n" || document.getElementById(cell+8).dataset.value=="1q" || document.getElementById(cell+8).dataset.value=="1k"){
+                                        document.getElementById(cell+8).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-21).dataset.value=="e"){
+                                    document.getElementById(cell-21).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-21).dataset.value=="1p" || document.getElementById(cell-21).dataset.value=="1b" || document.getElementById(cell-21).dataset.value=="1r" || document.getElementById(cell-21).dataset.value=="1n" || document.getElementById(cell-21).dataset.value=="1q" || document.getElementById(cell-21).dataset.value=="1k"){
+                                        document.getElementById(cell-21).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{ 
+                                if(document.getElementById(cell+21).dataset.value=="e"){
+                                    document.getElementById(cell+21).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+21).dataset.value=="1p" || document.getElementById(cell+21).dataset.value=="1b" || document.getElementById(cell+21).dataset.value=="1r" || document.getElementById(cell+21).dataset.value=="1n" || document.getElementById(cell+21).dataset.value=="1q" || document.getElementById(cell+21).dataset.value=="1k"){
+                                        document.getElementById(cell+21).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-19).dataset.value=="e"){
+                                    document.getElementById(cell-19).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-19).dataset.value=="1p" || document.getElementById(cell-19).dataset.value=="1b" || document.getElementById(cell-19).dataset.value=="1r" || document.getElementById(cell-19).dataset.value=="1n" || document.getElementById(cell-19).dataset.value=="1q" || document.getElementById(cell-19).dataset.value=="1k"){
+                                        document.getElementById(cell-19).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+19).dataset.value=="e"){
+                                    document.getElementById(cell+19).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+19).dataset.value=="1p" || document.getElementById(cell+19).dataset.value=="1b" || document.getElementById(cell+19).dataset.value=="1r" || document.getElementById(cell+19).dataset.value=="1n" || document.getElementById(cell+19).dataset.value=="1q" || document.getElementById(cell+19).dataset.value=="1k"){
+                                        document.getElementById(cell+19).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='2b'){
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='2q'){
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=10;i<=80;i=i+10){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            for(i=1;i<=7;i++){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch(e){break}
+                            }
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell+i).dataset.value=="e"){
+                                        document.getElementById(cell+i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell+i).dataset.value=="1p" || document.getElementById(cell+i).dataset.value=="1b" || document.getElementById(cell+i).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell+i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=11;i<=88;i=i+11){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            for(i=9;i<=72;i=i+9){
+                                try{
+                                    if(document.getElementById(cell-i).dataset.value=="e"){
+                                        document.getElementById(cell-i).style.border="2px solid red";
+                                    }
+                                    
+                                    
+                                    else if(document.getElementById(cell-i).dataset.value=="1p" || document.getElementById(cell-i).dataset.value=="1b" || document.getElementById(cell-i).dataset.value=="1r" || document.getElementById(cell-i).dataset.value=="1n" || document.getElementById(cell-i).dataset.value=="1q" || document.getElementById(cell-i).dataset.value=="1k"){
+                                        document.getElementById(cell-i).style.border="2px solid yellow";
+                                        break;
+                                    }
+                                    else{
+                                        break;
+                                    }
+                                }catch{break}
+                            }
+                            potential=true;
+                        }
+                        if(document.getElementById(cell).dataset.value=='2k'){
+                            try{
+                                if(document.getElementById(cell+10).dataset.value=="e"){
+                                    document.getElementById(cell+10).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+10).dataset.value=="1p" || document.getElementById(cell+10).dataset.value=="1b" || document.getElementById(cell+10).dataset.value=="1r" || document.getElementById(cell+10).dataset.value=="1n" || document.getElementById(cell+10).dataset.value=="1q" || document.getElementById(cell+10).dataset.value=="1k"){
+                                        document.getElementById(cell+10).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-10).dataset.value=="e"){
+                                    document.getElementById(cell-10).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-10).dataset.value=="1p" || document.getElementById(cell-10).dataset.value=="1b" || document.getElementById(cell-10).dataset.value=="1r" || document.getElementById(cell-10).dataset.value=="1n" || document.getElementById(cell-10).dataset.value=="1q" || document.getElementById(cell-10).dataset.value=="1k"){
+                                        document.getElementById(cell-10).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+1).dataset.value=="e"){
+                                    document.getElementById(cell+1).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+1).dataset.value=="1p" || document.getElementById(cell+1).dataset.value=="1b" || document.getElementById(cell+1).dataset.value=="1r" || document.getElementById(cell+1).dataset.value=="1n" || document.getElementById(cell+1).dataset.value=="1q" || document.getElementById(cell+1).dataset.value=="1k"){
+                                        document.getElementById(cell+1).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-1).dataset.value=="e"){
+                                    document.getElementById(cell-1).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-1).dataset.value=="1p" || document.getElementById(cell-1).dataset.value=="1b" || document.getElementById(cell-1).dataset.value=="1r" || document.getElementById(cell+i).dataset.value=="1n" || document.getElementById(cell+i).dataset.value=="1q" || document.getElementById(cell+i).dataset.value=="1k"){
+                                        document.getElementById(cell-1).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+11).dataset.value=="e"){
+                                    document.getElementById(cell+11).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+11).dataset.value=="1p" || document.getElementById(cell+11).dataset.value=="1b" || document.getElementById(cell+11).dataset.value=="1r" || document.getElementById(cell+11).dataset.value=="1n" || document.getElementById(cell+11).dataset.value=="1q" || document.getElementById(cell+11).dataset.value=="1k"){
+                                        document.getElementById(cell+11).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-11).dataset.value=="e"){
+                                    document.getElementById(cell-11).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-11).dataset.value=="1p" || document.getElementById(cell-11).dataset.value=="1b" || document.getElementById(cell-11).dataset.value=="1r" || document.getElementById(cell-11).dataset.value=="1n" || document.getElementById(cell-11).dataset.value=="1q" || document.getElementById(cell-11).dataset.value=="1k"){
+                                        document.getElementById(cell-11).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell+9).dataset.value=="e"){
+                                    document.getElementById(cell+9).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell+9).dataset.value=="1p" || document.getElementById(cell+9).dataset.value=="1b" || document.getElementById(cell+9).dataset.value=="1r" || document.getElementById(cell+9).dataset.value=="1n" || document.getElementById(cell+9).dataset.value=="1q" || document.getElementById(cell+9).dataset.value=="1k"){
+                                        document.getElementById(cell+9).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            try{
+                                if(document.getElementById(cell-9).dataset.value=="e"){
+                                    document.getElementById(cell-9).style.border="2px solid red";
+                                }
+                                else if(document.getElementById(cell-9).dataset.value=="1p" || document.getElementById(cell-9).dataset.value=="1b" || document.getElementById(cell-9).dataset.value=="1r" || document.getElementById(cell-9).dataset.value=="1n" || document.getElementById(cell-9).dataset.value=="1q" || document.getElementById(cell-9).dataset.value=="1k"){
+                                        document.getElementById(cell-9).style.border="2px solid yellow";
+                                }
+                            }catch(e){}
+                            potential=true;
+                        }
+                    }
+                   
+                }
+                
+                }
+                
+            }
+
+        }
+
+        function makeMove(cell){
+
+            //Need to work out the player for colour of piece
+            //Need to Work out the piece
+            //Need to work out where moved from and set as empty
+
+            //only if a move gets made successfully can we increment the counter
+            counter++;
+
+            //First of all check the board to find the highlighted square
+            for(i=11; i<=88; i++){
+                try{
+
+                    if(document.getElementById(i).style.border=="2px solid lightgreen"){
+
+                        //remove the piece to make the space empty
+                        document.getElementById(i).innerHTML="";
+
+                        //get the value of the piece
+                        piece=document.getElementById(i).dataset.value;
+
+                        //after getting value - set the value of space to empty for future play
+                        document.getElementById(i).dataset.value="e";
+
+                    }
+                }catch(e){}
+            }
+
+            //First of all check to see if it is a king that has been 
+            //taken in which case the game is over
+            if(document.getElementById(cell).dataset.value=="1k"){
+                document.getElementById("test").innerHTML="Player 2 wins";
+                
+                //Stop execution after this as game is over
+                //Simply reload the page
+                location.reload();
+
+            }
+            if(document.getElementById(cell).dataset.value=="2k"){
+                document.getElementById("test").innerHTML="Player 1 wins";
+            
+                //Stop execution after this as game is over
+                //Simply reload the page
+                location.reload();
+
+            }
+
+            //Check to see what player and what piece
+
+            //And then assign the value of that square as the piece
+
+            if(piece=='1p' || piece=='1n' || piece=='1r' || piece=='1b' || piece=='1q' || piece=='1k'){
+                if(piece=='1p'){
+
+                    document.getElementById("test").innerHTML=cell;
+
+                    //Do the check to see if it is at the end of the board
+                    //If it is then assign it a queen
+                    if((cell>80) && (cell<89)){
+                        document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_qlt60.png">';
+                        document.getElementById(cell).dataset.value="1q";
+                    }
+                    else{
+                        document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_plt60.png">';
+                        document.getElementById(cell).dataset.value="1p";
+                    }
+                }
+                if(piece=='1n'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_nlt60.png">';
+                    document.getElementById(cell).dataset.value="1n";
+                }
+                if(piece=='1r'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_rlt60.png">';
+                    document.getElementById(cell).dataset.value="1r";
+                }
+                if(piece=='1b'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_blt60.png">';
+                    document.getElementById(cell).dataset.value="1b";
+                }
+                if(piece=='1q'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_qlt60.png">';
+                    document.getElementById(cell).dataset.value="1q";
+                }
+                if(piece=='1k'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_klt60.png">';
+                    document.getElementById(cell).dataset.value="1k";
+                }
+            }
+
+            if(piece=='2p' || piece=='2n' || piece=='2r' || piece=='2b' || piece=='2q' || piece=='2k'){
+                if(piece=='2p'){
+
+                    //Do the check to see if it is at the end of the board
+                    //If it is then assign it a queen
+                    if((cell>10) && (cell<19)){
+                        document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_qdt60.png">';
+                        document.getElementById(cell).dataset.value="2q";
+                    }
+                    else{
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_pdt60.png">';
+                    document.getElementById(cell).dataset.value="2p";
+                    }
+                }
+                if(piece=='2n'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_ndt60.png">';
+                    document.getElementById(cell).dataset.value="2n";
+                }
+                if(piece=='2r'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_rdt60.png">';
+                    document.getElementById(cell).dataset.value="2r";
+                }
+                if(piece=='2b'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_bdt60.png">';
+                    document.getElementById(cell).dataset.value="2b";
+                }
+                if(piece=='2q'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_qdt60.png">';
+                    document.getElementById(cell).dataset.value="2q";
+                }
+                if(piece=='2k'){
+                    document.getElementById(cell).innerHTML='<img src="ChessPieces/Chess_kdt60.png">';
+                    document.getElementById(cell).dataset.value="2k";
+                }
+            }
+
+            //When the move is made, need to reset all highlighted squares on the board
+            //And reset clicked and potential
+            for (i=11; i<=88; i++){
+                try{
+                    document.getElementById(i).style.border="2px solid black";
+                }catch(e){}
+                clicked=false;
+                potential=false;
+            }
+        
+        }
+
+    </script>
+
+</body>
+
+
+</html>
